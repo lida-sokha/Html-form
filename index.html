@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create account</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form>
+        <h1>Create account</h1>
+        <hr>
+        <div class="name">
+            <div class="first-name">
+                <label for="first-name">First name*</label><br>
+                <input type="text" id="first-name"name="first-name" placeholder="Enter your first name" size="25"><br>
+            </div>
+            <div class="last-name">
+                <label for="last-name">last name*</label><br>
+                <input type="text" id="last-name"name="last-name" placeholder="Enter your last name" size="25"><br>
+            </div>
+        </div>
+        <div class="email">
+            <label for="email">Email*</label><br>
+            <input type="email" id="email" name="email" placeholder="Email" size="100"><br>
+        </div>
+        <div class="password">
+            <div class="password-1">
+                <label for="password">Password*</label><br>
+                <input type="password" id="password" name="password" placeholder="Enter password" size="25"><br>
+            </div>
+            <div class="password-confire">
+                <label for="password-confire">Password*</label><br>
+                <input type="password" id="password-confire" name="password" placeholder="Enter your password again" size="25"><br>
+            </div>
+        </div>
+        <div class="main">
+            <div class="left">
+                <div class="gender">
+                    <label for="gender">Gender*</label><br>
+                    <input type="radio" id="gender" name="gender">Male
+                    <input type="radio" id="gender" name="gender">Female<br>
+                </div>
+                <div class="employed">
+                    <label for="employed">Source of income</label><br>
+                    <select id="employed">
+                        <option value="employed">Employed</option>
+                        <option value="self-employed">Self-employed</option>
+                        <option value="unemployed">unemployed</option>
+                        <option value="Student">Student</option>
+                    </select>
+                </div>
+                <div class="img">
+                    <label for="img">Upload the Profile Picture</label><br>
+                    <input type="file" id="img" name="img">
+                </div>
+            </div>
+            <div class="right">
+                <div class="hobbies">
+                    <label for="hobbies">Hobbies</label><br>
+                    <input type="checkbox" id="hobbies" name="hobbies">Music
+                    <input type="checkbox" id="hobbies" name="hobbies">Sport
+                    <input type="checkbox" id="hobbies" name="hobbies">Travel
+                    <input type="checkbox" id="hobbies" name="hobbies">Movies
+                </div>
+                <div class="income">
+                    <label for="income">Income</label><br>
+                    <input type="range" id="income" name="income"  min="0" max="100000" step="1000" value="20000" oninput="updateValue(this.value)">
+                    <span id="income-value">20K</span>
+
+                    <script>
+                    function updateValue(val) {
+                        document.getElementById('income-value').textContent = val + "K";
+                    }
+                    </script>
+                </div>
+                <div class="age">
+                    <label for="age">Age</label><br>
+                    <input type="text" id="age" name="age">
+                </div>
+            </div>
+        </div>
+        <div class="bio">
+            
+            <input type="textarea" id="bio" name="bio" size="100" style="padding: 3%;">
+        </div>
+        <hr>
+        <div class="right">
+        <button type="submit">Create</button>
+        </div>
+    </form>
+</body>
+</html>
